@@ -19,6 +19,7 @@ def clean_df(df):
         else:
             record_dict[d_type] = record['value']
         record_dict['{}_ATTRIBUTES'.format(d_type)] = record['attributes']
+    temp_list.append(record_dict)
         
     temp_list = temp_list[1::]
     cleaned_df = pd.DataFrame.from_records(temp_list, index='DATE')
